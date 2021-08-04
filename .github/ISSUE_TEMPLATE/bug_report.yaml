@@ -1,13 +1,14 @@
 name: Bug反馈
 description: 创建一个反馈来帮助我们对脚本进行改进
 labels: ["bug"]
+assignees: andywang425
 
 body:
   - type: markdown
     attributes:
       value: |
         ## 欢迎
-        你可能可以在本项目的[README](https://github.com/andywang425/BLTH/blob/master/README.md)，脚本的内置说明（控制面板上蓝色的小问号）或[已存在的issue](https://github.com/andywang425/BLTH/issue)中找到答案。
+        你可能可以在本项目的[README](https://github.com/andywang425/BLTH/blob/master/README.md)，脚本的内置说明（控制面板上蓝色的小问号）或[已存在的issue](https://github.com/andywang425/BLTH/issues)中找到答案。
         <br />
 
   - id: describe
@@ -74,6 +75,8 @@ body:
       required: true
     attributes:
       label: "操作系统"
+      description: |
+        请给出操作系统名称和版本号。
       placeholder: |
         eg: Windows 10
 
@@ -83,6 +86,8 @@ body:
       required: true
     attributes:
       label: "浏览器"
+      description: |
+        请给出浏览器名称和版本号。
       placeholder: |
         eg: Chrome 81.0.3147.89
 
@@ -92,6 +97,8 @@ body:
       required: true
     attributes:
       label: "用户脚本管理器"
+      description: |
+        请给出用户脚本管理器名称和版本号。
       placeholder: |
         eg: Tampermonkey 4.11
 
@@ -101,6 +108,8 @@ body:
       required: true
     attributes:
       label: "挂机助手版本"
+      description: |
+        BLTH的版本。可以在用户脚本管理器中查看。
       placeholder: |
         eg: 5.6
 
