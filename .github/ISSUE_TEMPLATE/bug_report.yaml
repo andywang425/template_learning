@@ -67,13 +67,7 @@ body:
         普通日志请直接截图。控制台日志可截图或右键导出。
       placeholder: |
         请在此黏贴运行日志。
-
-  - type: markdown
-    attributes:
-      value: |
-        # 使用环境
-        <br />
-
+        
   - id: system
     type: input
     validations:
