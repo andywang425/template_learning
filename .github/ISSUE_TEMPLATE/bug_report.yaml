@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 注意
+        # 注意
         在反馈bug之前，请确保你已经认真阅读了本项目的README和脚本的内置说明。
         <br />
 
@@ -71,7 +71,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 使用环境
+        # 使用环境
+        <br />
 
   - id: system
     type: input
