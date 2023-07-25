@@ -1,15 +1,15 @@
 name: Bug反馈
-description: 提出你遇到的问题
+description: 创建一个反馈来帮助我们对脚本进行改进
+labels: ["bug"]
+assignees: andywang425
 
 body:
   - type: markdown
     attributes:
       value: |
-        **为避免无效问题和冗余问题，提问前请确认**  
-        - 你确定搜索引擎不能解决你的问题  
-        - 你确定提供的Readme文档和Release说明不能解决你的问题  
-        - 你确定已有的issue不能解决你的问题  
-        - 你确定issue的title能简明的描述你的问题  
+        ## 欢迎
+        你可能可以在本项目的[README](https://github.com/andywang425/BLTH/blob/master/README.md)，脚本的内置说明或[已存在的issue](https://github.com/andywang425/BLTH/issues)中找到答案。
+        如果不能，请按照要求编写反馈信息。
         <br />
 
   - id: describe
@@ -17,21 +17,26 @@ body:
     validations:
       required: true
     attributes:
-      label: "描述Bug"
+      label: "描述bug"
       description: |
-        简要而清晰的描述你所遇到的bug。
+        简要描述所遇到的bug。
+      placeholder: |
+        例子: 每日登录任务无法完成，任务状态显示为红色的叉且控制台中有相关报错。
 
   - id: reproduction
     type: textarea
     validations:
       required: true
     attributes:
-      label: "重现Bug"
+      label: "重现bug"
       description: |
-        说明您在进行了怎样的操作后出现了Bug.
+        说明您在进行了怎样的操作后出现了bug。
       placeholder: |
-        1. xxx
-        2. xxx
+        例子：
+
+        1. 开启每日登录功能
+        2. 刷新页面
+        3. ...
 
   - id: expection
     type: textarea
@@ -41,6 +46,8 @@ body:
       label: "预期行为"
       description: |
         简要描述进行以上操作后预期的脚本行为。
+      placeholder: |
+        例子: 完成每日登录任务。
 
   - id: picture
     type: textarea
@@ -49,9 +56,9 @@ body:
     attributes:
       label: "截图"
       description: |
-        如果可以，请提供尽可能多的相关截图。
+        如果可以，请提供有关截图。
       placeholder: |
-        可使用 QQ / Snipaste 等工具截图后在此处 ctrl + v 黏贴。
+        截图后在此处 ctrl + v 黏贴即可。
 
   - id: log
     type: textarea
@@ -60,9 +67,10 @@ body:
     attributes:
       label: "运行日志"
       description: |
-        控制台日志。
+        控制台日志的查看方式在README中[使用](https://github.com/andywang425/BLTH/blob/master/README.md#使用)这一节里有提到。
+        需要注意的是部分报错不会带有BLTH字样。
       placeholder: |
-        请在此黏贴运行日志。
+        请在此黏贴运行日志。截图或文字皆可。
 
   - id: system
     type: input
@@ -75,27 +83,62 @@ body:
       placeholder: |
         eg: Windows 10
 
-  - id: nodejs_version
+  - id: browser
     type: input
     validations:
       required: true
     attributes:
-      label: "NodeJs版本"
+      label: "浏览器"
       description: |
-        在控制台输入 node -v 即可查看版本号
+        请给出浏览器名称和版本号。
       placeholder: |
-        eg: v16.5.0
+        例子: Chrome 115.0.5790.102
 
-  - id: lotteryAutoScript_version
+  - id: userscript_manager
     type: input
     validations:
       required: true
     attributes:
-      label: "脚本版本"
+      label: "用户脚本管理器"
       description: |
-        脚本版本。脚本开始运行后会显示版本号。
+        请给出用户脚本管理器名称和版本号。
       placeholder: |
-        eg: v2.0.2
+        例子: Tampermonkey 4.19.0
+
+  - id: BLTH_version
+    type: input
+    validations:
+      required: true
+    attributes:
+      label: "挂机助手版本"
+      description: |
+        BLTH的版本。可以在用户脚本管理器中查看。
+      placeholder: |
+        例子: 7.0.0
+
+  - id: network_condition
+    type: dropdown
+    validations:
+      required: true
+    attributes:
+      label: "网络情况"
+      description: |
+        可以理解为网速情况。
+      options:
+        - 好
+        - 一般
+        - 坏
+
+  - id: other_scripts
+    type: input
+    validations:
+      required: true
+    attributes:
+      label: "其他浏览器拓展/用户脚本"
+      description: |
+        在此写上您认为可能会对本脚本产生影响的浏览器拓展/用户脚本。
+      placeholder: |
+        例子: adblock
 
   - id: extra
     type: textarea
@@ -104,4 +147,11 @@ body:
     attributes:
       label: "其他"
       description: |
-        若您有其他想要补充的内容，请在此说明
+        若您有其他想要补充的内容，请在此说明。
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 感谢反馈！
+        我们会尽快回复您提出的issue。
+        <br />
