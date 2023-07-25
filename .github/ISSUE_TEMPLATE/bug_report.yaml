@@ -7,10 +7,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 欢迎
+        # 欢迎
         你可能可以在本项目的[README](https://github.com/andywang425/BLTH/blob/master/README.md)，脚本的内置说明或[已存在的issue](https://github.com/andywang425/BLTH/issues)中找到答案。
         如果不能，请按照要求编写反馈信息。
-        <br />
 
   - id: describe
     type: textarea
@@ -33,7 +32,6 @@ body:
         说明您在进行了怎样的操作后出现了bug。
       placeholder: |
         例子：
-
         1. 开启每日登录功能
         2. 刷新页面
         3. ...
@@ -81,7 +79,7 @@ body:
       description: |
         请给出操作系统名称和版本号。
       placeholder: |
-        eg: Windows 10
+        例子: Windows 10
 
   - id: browser
     type: input
@@ -152,6 +150,5 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## 感谢反馈！
+        # 感谢反馈！
         我们会尽快回复您提出的issue。
-        <br />
